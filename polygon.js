@@ -51,6 +51,6 @@ function generateString() {
             polygonString += ",";
         }
     });
-    const queryString = `ST_Contains(ST_GeomFromText('${polygonString}'), POINT(user.lng, user.lat)) AS in_region`;
+    const queryString = `ST_Contains(ST_GeomFromText('${polygonString}))'), POINT(user.lng, user.lat)) AS in_region`;
     document.getElementById("generatedString").textContent = queryString;
 }
