@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>Google Map Polygon</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="polygon.css">
+</head>
+<body>
+<div id="map"></div>
+<div class="button-container">
+    <button id="getSqlPolygon">Get Sql</button><!--On Click : Get the Sql for Containing lat,lon If it lies inside the polygon-->
+    <button id="resetButton">Reset Map</button><!--On Click : Reset the polygon-->
+
+</div>
+<div id="generatedString"></div>
+<script
+        src=`https://maps.googleapis.com/maps/api/js?key=[ENTER_GOOGLE_MAP_API_KEY_HERE]&callback=initMap&v=weekly`
+        defer
+></script>
+<script src="./polygon.js"></script>
+</body>
+</html>
